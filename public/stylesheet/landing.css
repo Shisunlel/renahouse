@@ -18,12 +18,18 @@
 html,
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul{
+  list-style: none;
 }
 
 body {
-  font-family: "Nunito", "Poppins" sans-serif;
+  font-family: "Nunito", "Poppins", sans-serif;
   background: var(--light-shade);
-  overflow-x: hidden;
+  width: 100%;
 }
 
 .no-mpding {
@@ -45,6 +51,8 @@ a {
 a:hover {
   color: var(--light-accent);
   transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -moz-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .bg-dark-accent {
@@ -118,6 +126,7 @@ a:hover {
   position: absolute;
   width: 100vw;
   height: 100%;
+  max-width: 100%;
   z-index: -1;
   background: url("https://images.pexels.com/photos/4252526/pexels-photo-4252526.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   background-size: cover;
@@ -125,12 +134,16 @@ a:hover {
   opacity: 0.33;
 }
 
+form{
+  position: relative;
+}
+
 .searchInput {
   border: none;
   outline: none;
   padding: 8px;
   border-radius: 7px;
-  width: 300px;
+  width: 250px;
   text-align: right;
 }
 
@@ -141,8 +154,8 @@ a:hover {
 
 #search {
   position: absolute;
-  left: 55px;
-  top: 175px;
+  top: 20%;
+  left: 4%;
 }
 
 #search .fa-search:hover {
@@ -210,9 +223,9 @@ a:hover {
 /* ABOUT SECTION */
 
 .user-image {
-  padding: 15px;
-  width: 100vw;
+  width: 250px;
   height: auto;
+  padding: 15px;
 }
 
 .user-image img {
@@ -268,7 +281,7 @@ footer {
 #twitter:hover,
 #github:hover {
   transform: scale(1.2);
-  transition: transform 0.3 ease-in-out;
+  transition: transform 300ms ease-in-out;
 }
 
 /* END FOOTER */
@@ -286,13 +299,21 @@ footer {
 
 /* END MISC */
 
-@media (min-width: 1100px) {
-  
-  #search {
-    position: absolute;
-    left: 25px;
-    top: 298px;
+@media only screen and (min-width: 400px){
+ .searchInput {
+    width: 300px;
   }
+}
+
+@media only screen and (min-width: 768px){
+
+  .searchInput {
+    width: 250px;
+  }
+
+}
+
+@media only screen and (min-width: 1100px) {
 
   .card {
     box-shadow: 30px 0 20px 0 rgba(0, 0, 0, 0.1);
@@ -314,13 +335,9 @@ footer {
     top: -150px;
     width: 100vw;
     height: 200px;
+    max-width: 100%;
     left: 0;
     z-index: -99;
-  }
-
-  .user-image {
-    width: 300px;
-    height: 300px;
   }
 
   .user-image img:hover {
