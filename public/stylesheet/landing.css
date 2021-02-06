@@ -236,7 +236,7 @@ form{
 }
 
 .user-image img:hover {
-  transform: scale(0.95);
+  transform: scale(1.2);
 }
 
 /* END ABOUT SECTION */
@@ -347,11 +347,6 @@ footer {
     max-width: 100%;
     left: 0;
     z-index: -99;
-  }
-
-  .user-image img:hover {
-    transform: scale(1.2);
-    transition: transform 1s ease-out;
   }
 
   #footer-cp,
