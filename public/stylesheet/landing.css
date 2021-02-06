@@ -303,12 +303,21 @@ footer {
  .searchInput {
     width: 300px;
   }
+
+  .card{
+    flex: auto !important;
+    margin-bottom: 2em !important;
+  }
 }
 
 @media only screen and (min-width: 768px){
 
   .searchInput {
     width: 250px;
+  }
+
+  .card{
+    flex: 1 0 0% !important;
   }
 
 }
