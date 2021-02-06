@@ -21,12 +21,10 @@
     />
 
     <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+    <script
+      src="https://kit.fontawesome.com/7686e548c6.js"
       crossorigin="anonymous"
-    />
+    ></script>
 
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="/stylesheet/landing.css" />
@@ -68,12 +66,17 @@
                     <a class="nav-link" href="#services">Services</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
-                  </li>
-                  <li class="nav-item">
                     <a class="nav-link" href="#features">Features</a>
                   </li>
                   <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                  </li>
+                  <li class="nav-item mt-3 mt-md-0">
+                    <a class="btn btn-dark-accent" id="signinbtn" href="/login"
+                      >Sign In</a
+                    >
+                  </li>
+                  <li class="nav-item mt-3 mt-md-0">
                     <a
                       class="btn btn-dark-shade"
                       id="registerbtn"
@@ -88,47 +91,50 @@
           <!-- END OF NAV -->
           <!-- HEAD -->
           <header>
-            <section
-              id="header"
-              class="d-flex flex-column align-items-md-start align-items-center mt-5"
-            >
-              <h1>Find Your</h1>
-              <h1>Perfect Place.</h1>
-              <p class="text-center small">
-                Enjoy the comforts of an affordable rental, with the peace of
-                mind of booking with out app
-              </p>
-              <div class="form-group">
-                <form action="/" method="GET">
-                  <span id="search"
-                    ><a type="submit" class="text-dark" href="/"
-                      ><i class="fas fa-search"></i></a
-                  ></span>
-                  <input
-                    type="text"
-                    class="searchInput"
-                    placeholder="Search for a location ..."
-                  />
-                  <button class="btn btn-light ml-1">
-                    <i class="fas fa-sliders-h"></i>
-                  </button>
-                  <!-- button for drop down -->
-                </form>
-              </div>
-            </section>
+            <div class="row">
+              <section
+                id="header"
+                class="d-flex flex-column align-items-md-start align-items-center justify-content-md-center mt-5 col-12 col-md-5"
+              >
+                <h1>Find Your</h1>
+                <h1>Perfect Place.</h1>
+                <p class="text-center text-md-left small">
+                  Enjoy the comforts of an affordable rental, with the peace of
+                  mind of booking with our app
+                </p>
+                <div class="form-group">
+                  <form action="/" method="GET">
+                    <span id="search"
+                      ><a type="submit" class="text-dark" href="/"
+                        ><i class="fas fa-search"></i></a
+                    ></span>
+                    <input
+                      type="text"
+                      class="searchInput"
+                      placeholder="Search for a location ..."
+                    />
+                    <button class="btn btn-light ml-1">
+                      <i class="fas fa-sliders-h"></i>
+                    </button>
+                    <!-- button for drop down -->
+                  </form>
+                </div>
+              </section>
+
+              <!-- HEAD IMAGE -->
+              <section id="headerImage" class="mt-5 pb-5 col-12 col-md-7">
+                <img
+                  src="https://images.pexels.com/photos/584399/living-room-couch-interior-room-584399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                  class="img-fluid"
+                />
+              </section>
+            </div>
           </header>
         </div>
-        <!-- HEAD IMAGE -->
-        <section id="headerImage" class="mt-5 pb-5">
-          <img
-            src="https://images.pexels.com/photos/584399/living-room-couch-interior-room-584399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-            class="img-fluid"
-          />
-        </section>
       </section>
       <!-- END HEAD -->
       <!-- SERVICE SECTION -->
-      <div class="container mt-5">
+      <div class="container mt-5 fade-in">
         <section id="services" class="text-center mb-5">
           <h1>Our Services</h1>
           <p class="small">
@@ -195,8 +201,158 @@
         </section>
       </div>
       <!-- END SERVICE SECTION -->
+      <!-- FEATURES -->
+      <div class="container-fluid bg-dark-shade fade-in" id="features">
+        <div class="container text-light py-5">
+          <section id="features-title" class="text-center">
+            <h1>Features</h1>
+            <p class="small">
+              Here's why our service is <em>FAR</em> differ from our competitor.
+            </p>
+          </section>
+
+          <section id="list-features">
+            <div class="row p-3">
+              <div class="col-12 col-md-6 my-4">
+                <div class="row align-items-center justify-content-center">
+                  <figure class="col-4 col-md-5 features-logo text-center">
+                    <i class="fas fa-tachometer-alt fa-3x"></i>
+                  </figure>
+                  <div class="text-container col-8 col-md-7 text-left">
+                    <h5>High Speed Internet</h5>
+                    <p class="small">
+                      With our high speed internet technology, you won't ever
+                      lag behind or miss an important date again.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 my-4">
+                <div class="row align-items-center justify-content-center">
+                  <figure
+                    class="col-4 col-md-5 features-logo text-center order-2"
+                  >
+                    <i class="fas fa-user-lock fa-3x"></i>
+                  </figure>
+                  <div
+                    class="text-container col-8 col-md-7 text-right order-md-2"
+                  >
+                    <h5>Maximum Privacy</h5>
+                    <p class="small">
+                      Our app comes with a backdoor security as well as 2-Auth
+                      password so you won't have to deal with insecurity of your
+                      account. <br />
+                      We don't sell your data like some shh big company
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 my-4">
+                <div class="row align-items-center justify-content-center">
+                  <figure class="col-4 col-md-5 features-logo text-center">
+                    <i class="far fa-comment-dots fa-3x"></i>
+                  </figure>
+                  <div class="text-container col-8 col-md-7 text-left">
+                    <h5>Instant Reply</h5>
+                    <p class="small">
+                      Do not worry, we won't left you on read. Our 24/7 support
+                      will be with you every step of the way including hangover
+                      talks.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 my-4">
+                <div class="row align-items-center justify-content-center">
+                  <figure
+                    class="col-4 col-md-5 features-logo text-center order-2"
+                  >
+                    <i class="fas fa-hand-sparkles fa-3x"></i>
+                  </figure>
+                  <div
+                    class="text-container col-8 col-md-7 text-right order-md-2"
+                  >
+                    <h5>Hygene</h5>
+                    <p class="small">
+                      Taking care of our dear customers is always our priority
+                      so every time our customers check out and in. we make sure
+                      that the rooms are always kept clean because we are not a
+                      lazybones.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <!-- END FEATURES -->
+
+      <!-- ABOUT -->
       <div
-        class="container-fluid text-light-shade bg-dark-accent px-4 py-4 border-top"
+        class="container-fluid py-4 border-top text-center no-mpding fade-in"
+      >
+        <section id="about">
+          <h1>About Us</h1>
+          <p class="small">Our mastermind behind this amazing app</p>
+        </section>
+        <section id="team">
+          <div class="row">
+            <div class="col-12 col-md-3 d-flex flex-column align-items-center">
+              <figure class="user-image">
+                <img
+                  src="https://i.pinimg.com/originals/75/52/3a/75523a11530b7ae378aef6497457f7b8.jpg"
+                  alt=""
+                />
+              </figure>
+              <div class="text-content">
+                <h5>Vutha Vyrapol</h5>
+                <p class="text-info small">Web Developer</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-3 d-flex flex-column align-items-center">
+              <figure class="user-image">
+                <img
+                  src="https://i.pinimg.com/originals/93/3f/fa/933ffa776e73d640baa5172fb2e315c3.jpg"
+                  alt=""
+                />
+              </figure>
+              <div class="text-content">
+                <h5>Hong David</h5>
+                <p class="text-info small">Web Developer</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-3 d-flex flex-column align-items-center">
+              <figure class="user-image">
+                <img
+                  src="https://i.pinimg.com/originals/f9/e7/ad/f9e7ad3906cd503ee74d0867f085889e.jpg"
+                  alt=""
+                />
+              </figure>
+              <div class="text-content">
+                <h5>San Vuthdimong</h5>
+                <p class="text-info small">Graphic Designer</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-3 d-flex flex-column align-items-center">
+              <figure class="user-image">
+                <img
+                  src="https://wallpaperaccess.com/full/1629593.jpg"
+                  alt=""
+                />
+              </figure>
+              <div class="text-content">
+                <h5>Lim Visal</h5>
+                <p class="text-info small">Software Tester</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- END ABOUT -->
+      <!-- FOOTer -->
+      <footer
+        class="container-fluid text-light-shade bg-dark-accent px-4 py-4 border-top fade-in"
       >
         <div class="row text-md-center my-3">
           <div class="col-12 col-md-4 mt-2 mb-2">
@@ -272,7 +428,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </footer>
     </div>
   </body>
   <script
@@ -290,4 +446,5 @@
     integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
     crossorigin="anonymous"
   ></script>
+  <script src="./js/app.js"></script>
 </html>
