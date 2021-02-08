@@ -12,7 +12,7 @@ const express = require("express"),
 
 app.use(bodyParser.urlencoded({ extended: true }));
 //connect to db
-mongoose
+mongoose 
   .connect("mongodb://localhost/rentahouse", {
     useFindAndModify: false,
     useNewUrlParser: true,
@@ -108,16 +108,16 @@ app.post("/register", (req, res) => {
 });
 
 //LOGIN FORM
-app.get("/login", (req, res) => {
-  res.render("login");
+app.get("/signin", (req, res) => {
+  res.render("signin");
 });
 
 //LOGIN LOGIC
 app.post(
-  "/login",
+  "/signin",
   passport.authenticate("local", {
     successRedirect: "/house",
-    failureRedirect: "/login",
+    failureRedirect: "/signin",
   }),
   (req, res) => {}
 );
@@ -204,7 +204,7 @@ app.delete("/house/:id/comments/:comment_id", (req, res) => {
 });
 
 //listening port
-port = 3000;
+const port = process.env.PORT || 3000;
 app.listen(port, process.env.IP, () => {
   console.log("Listening to port", port);
 });
