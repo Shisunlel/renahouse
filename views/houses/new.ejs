@@ -1,0 +1,69 @@
+<%- include('../partials/header') %> <%- include('../partials/nav') %>
+
+<div class="container my-5">
+  <div class="row my-5">
+    <div class="col-12">
+      <h1 class="text-center">Host an apartment</h1>
+    </div>
+    <div class="col-12 mt-3">
+      <form id="form" action="/house" method="POST">
+        <div class="form-group">
+          <input
+            id="title"
+            class="form-control"
+            placeholder="title"
+            type="text"
+            name="house[title]"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            class="form-control"
+            placeholder="price"
+            type="number"
+            min="1"
+            max="100"
+            name="house[price]"
+          />
+        </div>
+        <div class="form-group">
+          <textarea
+            id="editor"
+            name="house[description]"
+            class="form-control"
+            placeholder="description"
+          >
+          </textarea>
+        </div>
+        <div class="form-group" id="imageTag">
+          <input
+            class="form-control"
+            placeholder="image"
+            type="text"
+            name="house[image]"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            class="form-control"
+            placeholder="location"
+            type="text"
+            name="house[location]"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            class="form-control"
+            placeholder="type"
+            type="text"
+            name="house[type]"
+          />
+        </div>
+        <button class="btn form-control btn-primary">Submit</button>
+        <a href="#" id="add-more">Add more Image</a>
+      </form>
+    </div>
+  </div>
+</div>
+
+<%- include('../partials/footer') %>

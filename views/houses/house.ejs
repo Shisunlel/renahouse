@@ -1,0 +1,23 @@
+<%- include('../partials/header') %> <%- include('../partials/nav') %>
+<div class="container">
+  <div class="row">
+    <% houses.forEach((house)=>{ %>
+    <div class="col-sm-12 col-md-6 col-lg-3 mt-4 mt-md-5">
+      <div class="card">
+        <a href="/house/<%= house._id %>">
+          <img class="img-fluid rounded" src="<%= house.image[0] %>" alt="" />
+        </a>
+        <article class="p-2">
+          <span><%= house.type %> - <%= house.location %></span>
+          <p>
+            <%= house.title.substring(0,50) %><% if(house.title.length > 50){
+            %>...<% } %>
+          </p>
+          <span>$<%= house.price %> / night</span>
+        </article>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</div>
+<%- include('../partials/footer') %>
