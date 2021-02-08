@@ -204,7 +204,7 @@ app.delete("/house/:id/comments/:comment_id", (req, res) => {
 });
 
 //listening port
-const port = process.env.port || 3000;
-app.listen(port, () => {
+port = 3000;
+app.listen(port, process.env.IP, () => {
   console.log("Listening to port", port);
 });
