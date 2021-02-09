@@ -31,6 +31,11 @@
     <title>Rentahouse</title>
   </head>
   <body>
+    <% if(error.length > 0){ %>
+    <div class="alert alert-danger" role="alert"><%= error %></div>
+    <% } %> <% if(success.length > 0){ %>
+    <div class="alert alert-success" role="alert"><%= success %></div>
+    <% } %>
     <div class="container-fluid m-0 p-0">
       <section id="headerContainer">
         <div class="container">
@@ -70,9 +75,10 @@
                   <li class="nav-item">
                     <a class="nav-link" href="#about">About</a>
                   </li>
+                  <% if(!currentUser){ %>
                   <li class="nav-item mt-2 mt-lg-0">
-                    <a class="btn btn-dark-accent" id="signinbtn" href="/signin"
-                      >Sign In</a
+                    <a class="btn btn-dark-accent" id="signinbtn" href="/login"
+                      >Login</a
                     >
                   </li>
                   <li class="nav-item mt-3 mt-lg-0">
@@ -83,6 +89,7 @@
                       >Register</a
                     >
                   </li>
+                  <% } %>
                 </ul>
               </div>
             </div>
@@ -103,7 +110,7 @@
                   mind of booking with our app
                 </p>
                 <div class="form-group">
-                  <form action="/" method="GET">
+                  <form action="/house" method="GET">
                     <span id="search"
                       ><a type="submit" class="text-dark" href="/"
                         ><i class="fas fa-search"></i></a

@@ -30,6 +30,11 @@
     <title>Rentahouse</title>
   </head>
   <body>
+    <% if(error.length > 0){ %>
+    <div class="alert alert-danger" role="alert"><%= error %></div>
+    <% } %> <% if(success.length > 0){ %>
+    <div class="alert alert-success" role="alert"><%= success %></div>
+    <% } %>
     <div class="container my-2">
       <div class="row my-2 my-md-3">
         <div class="col-12 d-lg-none text-center" id="profilepic">
@@ -39,7 +44,7 @@
       <div class="row p-2">
         <div class="col-12 col-lg-5 text-center">
           <div class="card p-3">
-            <h1 class="font-weight-bold">Sign In</h1>
+            <h1 class="font-weight-bold">Login</h1>
             <div class="using-social d-flex justify-content-center py-3">
               <div class="social-icon">
                 <span class="icon">
@@ -64,7 +69,7 @@
               </div>
             </div>
             <p class="text-muted font-14">or use your email account</p>
-            <form action="/signin" method="POST">
+            <form action="/login" method="POST">
               <div class="form-group">
                 <span><i class="fas fa-envelope"></i></span>
                 <input
@@ -91,9 +96,9 @@
                   <button
                     type="submit"
                     class="btn btn-main w-100"
-                    value="Sign In"
+                    value="Login"
                   >
-                    Sign In
+                    Login
                   </button>
                 </div>
                 <div class="col-4">

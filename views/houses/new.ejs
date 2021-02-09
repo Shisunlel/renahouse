@@ -13,7 +13,7 @@
             class="form-control"
             placeholder="title"
             type="text"
-            name="house[title]"
+            name="title"
           />
         </div>
         <div class="form-group">
@@ -23,15 +23,17 @@
             type="number"
             min="1"
             max="100"
-            name="house[price]"
+            step="0.10"
+            name="price"
           />
         </div>
         <div class="form-group">
           <textarea
+            name="description"
             id="editor"
-            name="house[description]"
             class="form-control"
             placeholder="description"
+            rows="5"
           >
           </textarea>
         </div>
@@ -40,7 +42,7 @@
             class="form-control"
             placeholder="image"
             type="text"
-            name="house[image]"
+            name="image"
           />
         </div>
         <div class="form-group">
@@ -48,7 +50,7 @@
             class="form-control"
             placeholder="location"
             type="text"
-            name="house[location]"
+            name="location"
           />
         </div>
         <div class="form-group">
@@ -56,7 +58,7 @@
             class="form-control"
             placeholder="type"
             type="text"
-            name="house[type]"
+            name="type"
           />
         </div>
         <button class="btn form-control btn-primary">Submit</button>

@@ -24,6 +24,6 @@ moreImage.addEventListener('click', ()=>{
     input.classList.add("form-control");
     input.setAttribute("placeholder", "image");
     input.setAttribute("type", "text");
-    input.setAttribute("name", "house[image]");
+    input.setAttribute("name", "image");
     div.appendChild(input);
 });

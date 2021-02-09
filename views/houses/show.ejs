@@ -1,9 +1,30 @@
 <%- include('../partials/header') %> <%- include('../partials/nav') %>
 
-<div class="container my-5">
+<div class="container my-lg-5">
   <div class="row mt-md-5">
-    <h3 class="p-2 d-none d-md-block"><%= house.title %></h3>
-    <h5 class="order-2 p-2 d-md-none d-block"><%= house.title %></h5>
+    <h3 class="p-2 d-none d-md-block font-weight-bold text-uppercase">
+      <%= house.title %>
+    </h3>
+    <h4 class="order-2 p-2 d-md-none d-block font-weight-bold text-uppercase">
+      <%= house.title %>
+    </h4>
+    <% if(currentUser && currentUser._id.equals(house.host.id)) { %>
+    <div
+      id="action-top"
+      class="order-3 order-md-0 ml-md-auto action-group d-flex align-items-center"
+    >
+      <span class="mr-2">
+        <a
+          href="/house/<%= house._id %>/edit"
+          class="btn btn-warning form-control"
+          >Edit</a
+        >
+      </span>
+      <form action="/house/<%= house._id %>?_method=DELETE" method="POST">
+        <button class="btn btn-danger form-control">Delete</button>
+      </form>
+    </div>
+    <% } %>
     <div
       id="carouselHouse"
       class="carousel slide"
@@ -39,11 +60,11 @@
   </div>
   <div class="row bg-light-shaded border-top">
     <!-- ABOUT -->
-    <div class="col-md-6">
+    <div class="col-md-6 my-3 border-bottom">
       <h3 class="text-dark-accent">About</h3>
-      <div class="info p-2">
+      <div class="info p-2 font-weight-light">
         <article><%- house.description %></article>
-        <div class="row mt-2">
+        <div class="row my-2">
           <div class="col-6">
             <a
               href="tel:+85592422556"
@@ -64,7 +85,7 @@
     <!-- END ABOUT -->
 
     <!-- FACILITIES -->
-    <div class="col-md-6 mt-2 mt-md-0 border-top">
+    <div class="col-md-6 my-3 border-bottom">
       <h3 class="text-dark-accent">Facilities</h3>
       <div class="info p-2">
         <ul class="d-flex flex-wrap">
@@ -90,9 +111,16 @@
     <!-- END FACILITIES -->
 
     <!-- COMMENT -->
-    <div class="col-12 mt-2 mt-md-0 border-top">
-      <h3 class="text-dark-accent">Comments</h3>
-      <a href="/house/<%= house._id %>/comments/new">Add new comments</a>
+    <div class="col-12 my-3 my-md-2">
+      <div class="review-item d-flex justify-content-between mb-3">
+        <h3 class="text-dark-accent">Comments</h3>
+        <a
+          class="btn btn-success"
+          id="newComment"
+          href="/house/<%= house._id %>/comments/new"
+          >Write a comment</a
+        >
+      </div>
       <div class="row align-content-center">
         <% house.comments.forEach((comment)=>{ %>
         <!-- COMMENT CARD -->
@@ -118,6 +146,7 @@
                 180){ %>...<% } %>
               </p>
             </div>
+            <% if(currentUser && currentUser._id.equals(comment.author.id)){ %>
             <div class="card-footer row">
               <div class="col-6">
                 <a
@@ -140,6 +169,7 @@
                 </form>
               </div>
             </div>
+            <% } %>
           </div>
         </div>
         <!-- END OF COMMENT CARD -->

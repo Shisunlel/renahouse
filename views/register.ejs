@@ -30,6 +30,11 @@
     <title>Rentahouse</title>
   </head>
   <body>
+    <% if(error.length > 0){ %>
+    <div class="alert alert-danger" role="alert"><%= error %></div>
+    <% } %> <% if(success.length > 0){ %>
+    <div class="alert alert-success" role="alert"><%= success %></div>
+    <% } %>
     <div class="container my-2">
       <div class="row my-2 my-md-3">
         <div class="col-12 d-lg-none text-center" id="profilepic">
@@ -97,7 +102,7 @@
                   </button>
                 </div>
                 <div class="col-4">
-                  <a href="/signin" class="btn btn-muted w-100">Sign In</a>
+                  <a href="/login" class="btn btn-muted w-100">Login</a>
                 </div>
               </div>
               <div class="custom-control custom-checkbox my-2 my-md-3">

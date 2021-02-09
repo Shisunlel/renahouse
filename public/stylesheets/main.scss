@@ -1,3 +1,16 @@
+$main: #64a432;
+$dark-accent: #5c4a3f;
+$dark-shade: #3a283d;
+$light-shade: #f4f0f0;
+$light-accent: #6c655c;
+$info: #39283d;
+$success: #53ac47;
+$warning: #d19c0f;
+$danger: #f44336;
+$facebook: #3b5998;
+$twitter: #00acee;
+$github: #211f1f;
+
 body {
   font-family: "Nunito", "Poppins" sans-serif;
   overflow-x: hidden;
@@ -10,89 +23,86 @@ ul {
 
 a {
   color: inherit;
-}
 
-a:hover {
-  color: inherit;
+  &:hover {
+    color: inherit;
+  }
 }
 
 .bg-primary,
 .btn-primary {
-  background: #64a432 !important;
+  background: $main !important;
 }
 
 .btn-outline-success {
-  outline: #53ac47;
-}
+  outline: $success;
 
-.btn-outline-success:hover {
-  background: #53ac47;
-  scale: 1.1;
-  -webkit-transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  &:hover {
+    background: $success;
+    scale: 1.1;
+    transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
 }
 
 .btn-dark-shade {
-  background: #3a283d;
-  color: #f4f0f0;
+  background: $dark-shade;
+  color: $light-shade;
   opacity: 0.95;
-}
 
-.btn-dark-shade:hover {
-  color: #f4f0f0;
-  opacity: 1;
-  scale: 1.1;
-  -webkit-transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
+  &:hover {
+    color: $light-shade;
+    opacity: 1;
+    scale: 1.1;
+    transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
 
-.btn-dark-shade:focus {
-  -webkit-box-shadow: 0.15px 2.2px 0.225px #f4f0f0;
-          box-shadow: 0.15px 2.2px 0.225px #f4f0f0;
-  border: none;
-  outline: none;
-  background: #3a283d;
+  &:focus {
+    box-shadow: 0.15px 2.2px 0.225px $light-shade;
+    border: none;
+    outline: none;
+    background: $dark-shade;
+  }
 }
 
 .bg-dark-shade {
-  background: #3a283d;
-  color: #f4f0f0;
+  background: $dark-shade;
+  color: $light-shade;
   opacity: 0.95;
 }
 
 .bg-light-shaded,
 btn-light-shaded {
-  background: #f4f0f0;
+  background: $light-shade;
 }
 
 .border-top-light-accent {
-  border-top: 1px solid #6c655c;
+  border-top: 1px solid $light-accent;
 }
 
 .bg-dark-accent {
-  background: #5c4a3f;
+  background: $dark-accent;
 }
 
 .text-dark-accent {
-  color: #5c4a3f;
+  color: $dark-accent;
 }
 
 .text-light-shade {
-  color: #f4f0f0;
+  color: $light-shade;
 }
 
 .btn-danger,
 .bg-danger {
-  background: #f44336;
+  background: $danger;
 }
 
 .btn-warning,
 .bg-warning {
-  background: #d19c0f;
+  background: $warning;
 }
 
 .btn-outline-danger {
-  outline: #f44336;
+  outline: $danger;
 }
 
 .navbar-brand {
@@ -100,18 +110,18 @@ btn-light-shaded {
   height: 100px;
 }
 
-#action-top {
+#action-top{
   width: 100%;
-}
 
-#action-top span {
-  width: 100%;
-  padding: 0 8px;
-}
+  & span{
+    width: 100%;
+    padding: 0 8px;
+  }
 
-#action-top form {
-  width: 100%;
-  padding: 0 8px;
+  & form{
+    width: 100%;
+    padding: 0 8px;
+  }
 }
 
 #carouselHouse {
@@ -129,8 +139,7 @@ figure {
 }
 
 figure img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   max-height: 100% !important;
   width: 100% !important;
 }
@@ -165,14 +174,13 @@ li.facilities-icon {
   border-radius: 50%;
 }
 
-#newComment {
+#newComment{
   display: inline-block;
   position: fixed;
   right: 1rem;
   bottom: 12rem;
   border-radius: 25px;
-  -webkit-box-shadow: 2px 5px 5px 0.125px rgba(70, 66, 71, 0.5);
-          box-shadow: 2px 5px 5px 0.125px rgba(70, 66, 71, 0.5);
+  box-shadow: 2px 5px 5px 0.125px rgba(70, 66, 71, 0.5);
 }
 
 #footer-cp,
@@ -186,37 +194,35 @@ li.facilities-icon {
 #twitter,
 #github {
   color: #fff;
-  -webkit-transition: color 1.5s ease-in;
   transition: color 1.5s ease-in;
 }
 
 #facebook:hover {
-  color: #3b5998;
-  -webkit-transition: color 0.5s ease-in-out;
+  color: $facebook;
   transition: color 0.5s ease-in-out;
 }
 
 #twitter:hover {
-  color: #00acee;
-  -webkit-transition: color 0.5s ease-in-out;
+  color: $twitter;
   transition: color 0.5s ease-in-out;
 }
 
 #github:hover {
-  color: #211f1f;
-  -webkit-transition: color 0.5s ease-in-out;
+  color: $github;
   transition: color 0.5s ease-in-out;
 }
 
-@media only screen and (min-width: 800px) {
-  #action-top {
+@media only screen and (min-width: 800px){
+  #action-top{
     width: auto;
-  }
-  #action-top span {
-    width: auto;
-  }
-  #action-top form {
-    width: auto;
+
+    & span{
+      width: auto;
+    }
+  
+    & form{
+      width: auto;
+    }
   }
 }
 
@@ -224,13 +230,16 @@ li.facilities-icon {
   .card > a img {
     height: 200px;
   }
+
   .carousel-inner {
     height: 330px;
     width: 1128px;
   }
-  #form {
+
+  #form{
     width: 40%;
   }
+
   #footer-cp,
   #footer-container,
   #footer-column {
@@ -238,4 +247,3 @@ li.facilities-icon {
     margin: auto !important;
   }
 }
-/*# sourceMappingURL=main.css.map */
