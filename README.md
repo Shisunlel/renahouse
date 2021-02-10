@@ -16,27 +16,27 @@ Our beautiful and responsive landing page comes with some animation when hoverin
 - team user profile
 - social links
 
-[comment]: # (add gif of landing)
+[!landing gif](https://i.imgur.com/lQ8b9JT)
 
 ## Register and Login Page
 
 With minimum approach our register/login page comes with readability 
 So far we only have animation on forget password link
 
-[comment]: # (add gif of login/register)
+![user registration/login](https://user-images.githubusercontent.com/53817853/107535508-5f98b380-6bf3-11eb-9eae-03a6fb1ecc8d.gif)
 
 ## Result Page
 
 This is where user can find their list of available place for rent (working-in-progress)
 Navbar is at the bottom for mobile and at the top + collapse for wider devices
 
-[comment]: # (add gif of result)
+[!result page](https://imgur.com/SX1Rmcg)
 
 ## Room Information Page
 
 User can view their favorite place in detail that comes with real/exclusive picture of the room where they will be staying at including a list of available facilities the owner will provide (ui is lackluster and crangy so far)
 
-[comment]: # (add gif of information)
+[!room information](https://imgur.com/2rJ5cxr)
 
 ## Security
 
