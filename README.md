@@ -16,7 +16,7 @@ Our beautiful and responsive landing page comes with some animation when hoverin
 - team user profile
 - social links
 
-[comment]: # (add gif of landing)
+![landing](https://user-images.githubusercontent.com/53817853/107538119-34639380-6bf6-11eb-8590-c170de686a3e.gif)
 
 ## Register and Login Page
 
