@@ -16,7 +16,7 @@ Our beautiful and responsive landing page comes with some animation when hoverin
 - team user profile
 - social links
 
-[!landing gif](https://i.imgur.com/lQ8b9JT)
+![landing gif](https://i.imgur.com/lQ8b9JT)
 
 ## Register and Login Page
 
@@ -36,7 +36,7 @@ Navbar is at the bottom for mobile and at the top + collapse for wider devices
 
 User can view their favorite place in detail that comes with real/exclusive picture of the room where they will be staying at including a list of available facilities the owner will provide (ui is lackluster and crangy so far)
 
-[!room information](https://imgur.com/2rJ5cxr.mp4)
+![room information](https://imgur.com/2rJ5cxr.mp4)
 
 ## Security
 
