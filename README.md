@@ -16,7 +16,7 @@ Our beautiful and responsive landing page comes with some animation when hoverin
 - team user profile
 - social links
 
-![landing gif](https://i.imgur.com/lQ8b9JT)
+![landing](https://user-images.githubusercontent.com/53817853/107538119-34639380-6bf6-11eb-8590-c170de686a3e.gif)
 
 ## Register and Login Page
 
@@ -30,7 +30,7 @@ So far we only have animation on forget password link
 This is where user can find their list of available place for rent (working-in-progress)
 Navbar is at the bottom for mobile and at the top + collapse for wider devices
 
-![result page](https://imgur.com/SX1Rmcg)
+![result](https://user-images.githubusercontent.com/53817853/107538381-7e4c7980-6bf6-11eb-8ad8-2b10480f8d95.gif)
 
 ## Room Information Page
 
