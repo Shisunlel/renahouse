@@ -23,14 +23,14 @@ Our beautiful and responsive landing page comes with some animation when hoverin
 With minimum approach our register/login page comes with readability 
 So far we only have animation on forget password link
 
-![result](https://user-images.githubusercontent.com/53817853/107538381-7e4c7980-6bf6-11eb-8ad8-2b10480f8d95.gif)
+![user registration/login](https://user-images.githubusercontent.com/53817853/107535508-5f98b380-6bf3-11eb-9eae-03a6fb1ecc8d.gif)
 
 ## Result Page
 
 This is where user can find their list of available place for rent (working-in-progress)
 Navbar is at the bottom for mobile and at the top + collapse for wider devices
 
-[comment]: # (add gif of result)
+![result](https://user-images.githubusercontent.com/53817853/107538381-7e4c7980-6bf6-11eb-8ad8-2b10480f8d95.gif)
 
 ## Room Information Page
 
