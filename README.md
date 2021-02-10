@@ -30,7 +30,7 @@ So far we only have animation on forget password link
 This is where user can find their list of available place for rent (working-in-progress)
 Navbar is at the bottom for mobile and at the top + collapse for wider devices
 
-[!result page](https://imgur.com/SX1Rmcg)
+![result page](https://imgur.com/SX1Rmcg)
 
 ## Room Information Page
 
