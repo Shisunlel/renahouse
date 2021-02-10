@@ -1,0 +1,325 @@
+$main: #64a432;
+$dark-accent: #5c4a3f;
+$dark-shade: #3a283d;
+$light-shade: #f4f0f0;
+$light-accent: #6c655c;
+$info: #39283d;
+$success: #53ac47;
+$warning: #d19c0f;
+$danger: #f44336;
+$facebook: #3b5998;
+$twitter: #00acee;
+$github: #211f1f;
+
+body {
+  font-family: "Nunito", "Poppins" sans-serif;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+.bg-primary,
+.btn-primary {
+  background: $main !important;
+}
+
+.btn-outline-success {
+  outline: $success;
+
+  &:hover {
+    background: $success;
+    scale: 1.1;
+    transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+}
+
+.btn-dark-shade {
+  background: $dark-shade;
+  color: $light-shade;
+  opacity: 0.95;
+
+  &:hover {
+    color: $light-shade;
+    opacity: 1;
+    scale: 1.1;
+    transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  &:focus {
+    box-shadow: 0.15px 2.2px 0.225px $light-shade;
+    border: none;
+    outline: none;
+    background: $dark-shade;
+  }
+}
+
+.bg-dark-shade {
+  background: $dark-shade;
+  color: $light-shade;
+  opacity: 0.95;
+}
+
+.bg-light-shaded,
+btn-light-shaded {
+  background: $light-shade;
+}
+
+.border-top-light-accent {
+  border-top: 1px solid $light-accent;
+}
+
+.bg-dark-accent {
+  background: $dark-accent;
+}
+
+.text-dark-accent {
+  color: $dark-accent;
+}
+
+.text-light-shade {
+  color: $light-shade;
+}
+
+.btn-danger,
+.bg-danger {
+  background: $danger;
+}
+
+.btn-warning,
+.bg-warning {
+  background: $warning;
+}
+
+.btn-outline-danger {
+  outline: $danger;
+}
+
+.navbar-brand {
+  width: 100px;
+  height: 100px;
+}
+
+#action-top {
+  width: 100%;
+
+  & span {
+    width: 100%;
+    padding: 0 8px;
+  }
+
+  & form {
+    width: 100%;
+    padding: 0 8px;
+  }
+}
+
+#carouselHouse {
+  max-width: 100%;
+}
+
+.carousel-inner {
+  height: 245px;
+  width: 100vw;
+  max-width: 100%;
+}
+
+figure {
+  height: 100%;
+}
+
+figure img {
+  object-fit: cover;
+  max-height: 100% !important;
+  width: 100% !important;
+}
+
+.rounded {
+  border-radius: 1.33rem !important;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+#form {
+  display: block;
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+li.facilities-icon {
+  width: 50%;
+  margin-top: 1.3%;
+}
+
+.card {
+  border: none;
+}
+
+.house-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  max-height: 24px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+}
+
+.profile img {
+  max-width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.facilities-icon {
+  display: flex;
+  align-items: baseline;
+  & > p {
+    & > i {
+      width: 1rem;
+    }
+  }
+}
+
+#newComment {
+  display: inline-block;
+  position: fixed;
+  right: 1rem;
+  bottom: 12rem;
+  border-radius: 25px;
+  box-shadow: 2px 5px 5px 0.125px rgba(70, 66, 71, 0.5);
+}
+
+#sticky-fluid{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $info;
+  box-shadow: 0 10px 5px 0 $info;
+  width: 100%;
+  max-width: 100%;
+  
+}
+
+.sticky-container{
+  margin: 1rem;
+  & > .sticky-icon{
+    & > span a i {
+      font-size: 1.5rem;
+      color: #a5df47;
+    }
+  }
+
+  & > .sticky-text{
+    color: $light-shade;
+    font-weight: 300;
+    font-size: 13px;
+  }
+}
+
+.sticky-hide{
+  opacity: 0;
+  transition: opacity 250ms ease-out;
+}
+
+.sticky-show{
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+
+
+#footer-cp,
+#footer-container,
+#footer-column {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+#facebook,
+#twitter,
+#github {
+  color: #fff;
+  transition: color 1.5s ease-in;
+}
+
+#facebook:hover {
+  color: $facebook;
+  transition: color 0.5s ease-in-out;
+}
+
+#twitter:hover {
+  color: $twitter;
+  transition: color 0.5s ease-in-out;
+}
+
+#github:hover {
+  color: $github;
+  transition: color 0.5s ease-in-out;
+}
+
+@media only screen and (min-width: 800px) {
+  #action-top {
+    width: auto;
+
+    & span {
+      width: auto;
+    }
+
+    & form {
+      width: auto;
+    }
+  }
+
+  .facilities-icon {
+    & > p {
+      & > i {
+        width: 2rem;
+        height: 2rem;
+        font-size: 1.3rem;
+      }
+    }
+    & > span {
+      font-size: 1.2rem;
+    }
+  }
+
+  .sticky-hide, .sticky-show{
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .card > a img {
+    height: 200px;
+  }
+
+  .carousel-inner {
+    height: 330px;
+    width: 1128px;
+  }
+
+  #form {
+    width: 40%;
+  }
+
+  #footer-cp,
+  #footer-container,
+  #footer-column {
+    padding: auto !important;
+    margin: auto !important;
+  }
+}
