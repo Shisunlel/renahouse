@@ -36,7 +36,7 @@ Navbar is at the bottom for mobile and at the top + collapse for wider devices
 
 User can view their favorite place in detail that comes with real/exclusive picture of the room where they will be staying at including a list of available facilities the owner will provide (ui is lackluster and crangy so far)
 
-[comment]: # (add gif of information)
+![room_information](https://user-images.githubusercontent.com/53817853/107538631-c2d81500-6bf6-11eb-90a0-42831721e537.gif)
 
 ## Security
 
