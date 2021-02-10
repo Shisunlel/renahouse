@@ -23,7 +23,7 @@ Our beautiful and responsive landing page comes with some animation when hoverin
 With minimum approach our register/login page comes with readability 
 So far we only have animation on forget password link
 
-![user registration/login](https://user-images.githubusercontent.com/53817853/107535508-5f98b380-6bf3-11eb-9eae-03a6fb1ecc8d.gif)
+![result](https://user-images.githubusercontent.com/53817853/107538381-7e4c7980-6bf6-11eb-8ad8-2b10480f8d95.gif)
 
 ## Result Page
 
