@@ -110,15 +110,15 @@ btn-light-shaded {
   height: 100px;
 }
 
-#action-top{
+#action-top {
   width: 100%;
 
-  & span{
+  & span {
     width: 100%;
     padding: 0 8px;
   }
 
-  & form{
+  & form {
     width: 100%;
     padding: 0 8px;
   }
@@ -168,13 +168,32 @@ li.facilities-icon {
   border: none;
 }
 
+.house-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  max-height: 24px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+}
+
 .profile img {
   max-width: 40px;
   height: 40px;
   border-radius: 50%;
 }
 
-#newComment{
+.facilities-icon {
+  display: flex;
+  align-items: baseline;
+  & > p {
+    & > i {
+      width: 1rem;
+    }
+  }
+}
+
+#newComment {
   display: inline-block;
   position: fixed;
   right: 1rem;
@@ -182,6 +201,46 @@ li.facilities-icon {
   border-radius: 25px;
   box-shadow: 2px 5px 5px 0.125px rgba(70, 66, 71, 0.5);
 }
+
+#sticky-fluid{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $info;
+  box-shadow: 0 10px 5px 0 $info;
+  width: 100%;
+  max-width: 100%;
+  
+}
+
+.sticky-container{
+  margin: 1rem;
+  & > .sticky-icon{
+    & > span a i {
+      font-size: 1.5rem;
+      color: #a5df47;
+    }
+  }
+
+  & > .sticky-text{
+    color: $light-shade;
+    font-weight: 300;
+    font-size: 13px;
+  }
+}
+
+.sticky-hide{
+  opacity: 0;
+  transition: opacity 250ms ease-out;
+}
+
+.sticky-show{
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+
 
 #footer-cp,
 #footer-container,
@@ -212,17 +271,34 @@ li.facilities-icon {
   transition: color 0.5s ease-in-out;
 }
 
-@media only screen and (min-width: 800px){
-  #action-top{
+@media only screen and (min-width: 800px) {
+  #action-top {
     width: auto;
 
-    & span{
+    & span {
       width: auto;
     }
-  
-    & form{
+
+    & form {
       width: auto;
     }
+  }
+
+  .facilities-icon {
+    & > p {
+      & > i {
+        width: 2rem;
+        height: 2rem;
+        font-size: 1.3rem;
+      }
+    }
+    & > span {
+      font-size: 1.2rem;
+    }
+  }
+
+  .sticky-hide, .sticky-show{
+    display: none;
   }
 }
 
@@ -236,7 +312,7 @@ li.facilities-icon {
     width: 1128px;
   }
 
-  #form{
+  #form {
     width: 40%;
   }
 

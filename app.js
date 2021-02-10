@@ -28,7 +28,7 @@ mongoose
     console.log("Conneted");
   })
   .catch((err) => {
-    console.log("Erorr", err);
+    console.log("Erorr", err.message);
   });
 
 app.set("view engine", "ejs");
@@ -64,6 +64,10 @@ app.use((req, res, next) => {
 app.use("/house", houseRoute);
 app.use("/", authRoute);
 app.use("/house/:id", commentRoute);
+
+app.get('*', (req, res)=>{
+  res.send("ERROR 404: PAGE NOT FOUND");
+});
 
 
 //listening port

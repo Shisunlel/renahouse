@@ -1,4 +1,45 @@
-<div class="container-fluid text-light-shade bg-dark-accent px-4 py-4 border-top ">
+<!-- STICKY PROFILE -->
+<div class="container-fluid text-center sticky-hide" id="sticky-fluid">
+  <div class="container">
+    <div class="row">
+    <div class="col-3 <% if(!currentUser) { %> col-4 <% } %>">
+      <div class="sticky-container">
+        <p class="sticky-icon"><span><a href="/"><i class="fas fa-home"></i></a></span></p>
+        <p class="sticky-text">Home</p>
+      </div>
+    </div>
+    <div class="col-3 <% if(!currentUser) { %> col-4 <% } %>">
+      <div class="sticky-container">
+        <p class="sticky-icon"><span><a href="#"><i class="fas fa-search"></a></i></span></p>
+        <p class="sticky-text">Search</p>
+      </div>
+    </div>
+    <% if(currentUser){ %>
+    <div class="col-3">
+      <div class="sticky-container">
+        <p class="sticky-icon"><span><a href="#"><i class="fas fa-heart"></a></i></span></p>
+        <p class="sticky-text">Saved</p>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="sticky-container">
+        <p class="sticky-icon"><span><a href="/account-settings"><i class="fas fa-user-circle"></a></i></span></p>
+        <p class="sticky-text">Profile</p>
+      </div>
+    </div>
+    <% }else{ %>
+    <div class="col-3 <% if(!currentUser) { %> col-4 <% } %>">
+      <div class="sticky-container">
+        <p class="sticky-icon"><span><a href="/login"><i class="fas fa-user-circle"></a></i></span></p>
+        <p class="sticky-text">Login</p>
+      </div>
+    </div>
+    <% } %>
+  </div>
+</div>
+</div>
+
+<footer class="container-fluid text-light-shade bg-dark-accent px-4 py-4 border-top ">
   <div class="row text-md-center my-3">
     <div class="col-12 col-md-4 mt-2 mb-2">
       <section class="about-footer">
@@ -49,26 +90,4 @@
     </div>
   </div>
 </div>
-</div>
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
-<script src="/script/app.js"></script>
-<script>
-  ClassicEditor
-      .create( document.querySelector( '#editor' ),  {
-        toolbar: [ 'heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote', ],
-        heading: {
-            options: [
-                { model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
-                { model: 'heading1', view: 'h1', title: 'Heading 1', class: 'ck-heading_heading1' },
-                { model: 'heading2', view: 'h2', title: 'Heading 2', class: 'ck-heading_heading2' }
-            ]
-        }} )
-      .catch( error => {
-          console.error( error );
-      } );
-</script>
-</body>
-</html>
+</footer>

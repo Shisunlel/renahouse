@@ -49,6 +49,11 @@ a:hover {
   color: #5c4a3f;
 }
 
+.btn-dark-accent:focus {
+  -webkit-box-shadow: 0 0 0 2px #f4f0f0, 0 0 0 3px #5c4a3f;
+          box-shadow: 0 0 0 2px #f4f0f0, 0 0 0 3px #5c4a3f;
+}
+
 .text-info {
   color: #39283d;
 }
@@ -84,6 +89,7 @@ a:hover {
 .navbar-brand {
   width: 100px;
   height: 100px;
+  margin: 0 auto;
 }
 
 .navbar-brand img {
@@ -107,8 +113,28 @@ a:hover {
   transition: transform 1s ease-in, -webkit-transform 1s ease-in;
 }
 
-.nav-items {
-  width: 600px;
+.navbar-collapse {
+  width: 100%;
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navbar-collapse > .nav-items > .navbar-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .nav-link {
@@ -381,6 +407,25 @@ footer {
 }
 
 @media only screen and (min-width: 768px) {
+  .nav-items {
+    width: 600px;
+  }
+  .navbar-collapse {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .navbar-nav {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
   .searchInput {
     width: 250px;
   }
@@ -417,6 +462,22 @@ footer {
   .image-container {
     width: 250px;
     height: 220px;
+  }
+  #headerImage {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition: -webkit-transform 500ms ease-out;
+    transition: -webkit-transform 500ms ease-out;
+    transition: transform 500ms ease-out;
+    transition: transform 500ms ease-out, -webkit-transform 500ms ease-out;
+  }
+  #headerImage:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-transition: -webkit-transform 250ms ease-in;
+    transition: -webkit-transform 250ms ease-in;
+    transition: transform 250ms ease-in;
+    transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
   }
   #features::before {
     content: "";

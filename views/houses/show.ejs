@@ -11,7 +11,7 @@
     <% if(currentUser && currentUser._id.equals(house.host.id)) { %>
     <div
       id="action-top"
-      class="order-3 order-md-0 ml-md-auto action-group d-flex align-items-center"
+      class="order-3 order-md-0 ml-md-auto action-group d-flex align-items-center my-2 my-md-0"
     >
       <span class="mr-2">
         <a
@@ -88,22 +88,26 @@
     <div class="col-md-6 my-3 border-bottom">
       <h3 class="text-dark-accent">Facilities</h3>
       <div class="info p-2">
-        <ul class="d-flex flex-wrap">
+        <ul class="d-flex flex-wrap font-weight-light">
           <li class="facilities-icon">
-            <h5>
-              <i class="fas fa-utensils"></i><span class="ml-2">Kitchen</span>
-            </h5>
+            <p>
+              <i class="fas fa-utensils"></i>
+            </p>
+            <span class="ml-3">Kitchen</span>
           </li>
           <li class="facilities-icon">
-            <h5><i class="fas fa-wifi"></i><span class="ml-2">Wi-Fi</span></h5>
+            <p><i class="fas fa-wifi"></i></p>
+            <span class="ml-3">Wi-Fi</span>
           </li>
           <li class="facilities-icon">
-            <h5>
-              <i class="fas fa-car"></i><span class="ml-2">Parking Space</span>
-            </h5>
+            <p>
+              <i class="fas fa-car"></i>
+            </p>
+            <span class="ml-3">Parking Space</span>
           </li>
           <li class="facilities-icon">
-            <h5><i class="fas fa-water"></i><span class="ml-2">Water</span></h5>
+            <p><i class="fas fa-water"></i></p>
+            <span class="ml-3">Water</span>
           </li>
         </ul>
       </div>
@@ -180,4 +184,4 @@
   </div>
 </div>
 
-<%- include('../partials/footer') %>
+<%- include('../partials/footer') %> <%- include('../partials/footerScript') %>
