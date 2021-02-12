@@ -11,9 +11,10 @@ const express = require("express"),
   app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
+const uri = "mongodb+srv://mama:Trinityy2502@mamacluster.yqwif.mongodb.net/rentahouse?retryWrites=true&w=majority&ssl=true";
 //connect to db
 mongoose
-  .connect("mongodb://localhost/rentahouse", {
+  .connect("uri", {
     useFindAndModify: false,
     useNewUrlParser: true,
     useUnifiedTopology: true,
