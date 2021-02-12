@@ -1,5 +1,3 @@
-const middlewareObj = require("../../yelpcamp_deploy/middleware");
-
 const express = require("express"),
   router = express.Router(),
   House = require("../models/house"),

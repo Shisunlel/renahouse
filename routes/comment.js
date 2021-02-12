@@ -1,6 +1,3 @@
-const middlewareObj = require("../../yelpcamp_deploy/middleware");
-const { isLoggedIn } = require("../../yelpcamp_deploy/middleware");
-
 const express = require("express"),
   router = express.Router({ mergeParams: true }),
   House = require("../models/house"),
