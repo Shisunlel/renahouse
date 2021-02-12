@@ -17,10 +17,8 @@ const houseRoute = require("./routes/houses"),
   commentRoute = require("./routes/comment");
 
 //connect to db
-const local = "mongodb://localhost/rentahouse";
-const url = "mongodb+srv://mama:Trinityy2502@mamacluster.yqwif.mongodb.net/rentahouse?retryWrites=true&w=majority&ssl=true";
 mongoose
-  .connect(url, {
+  .connect(process.env.DATABASEURL, {
     useFindAndModify: false,
     useNewUrlParser: true,
     useUnifiedTopology: true,
