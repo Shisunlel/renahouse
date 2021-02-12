@@ -49,7 +49,7 @@ a {
   color: $light-shade;
   opacity: 0.95;
 
-  &:hover {
+  &#emailBtn:hover {
     color: $light-shade;
     opacity: 1;
     scale: 1.1;
@@ -60,6 +60,7 @@ a {
     box-shadow: 0.15px 2.2px 0.225px $light-shade;
     border: none;
     outline: none;
+    color: $light-shade;
     background: $dark-shade;
   }
 }
@@ -103,6 +104,28 @@ btn-light-shaded {
 
 .btn-outline-danger {
   outline: $danger;
+}
+
+.navbar{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#form-container{
+  width: 60%;
+  max-width: 100%;
+}
+
+form #navSearch{
+  width: 65%;
+  transition: width 250ms ease-out;
+  will-change: width;
+
+  &:focus{
+    width: 100%;
+  }
 }
 
 .navbar-brand {
@@ -281,6 +304,67 @@ li.facilities-icon {
 
     & form {
       width: auto;
+    }
+  }
+
+  .navbar{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar-toggler{
+    display: flex !important;
+    align-items: center;
+
+    &:hover,
+    &:focus{
+      box-shadow: 0 1px 0 0 rgba(75, 70, 77, 0.3);
+      outline: none;
+    }
+
+    &-icon{
+      margin-right: 5px;
+    }
+  }
+
+  .navbar-collapse{
+    position: absolute;
+    right: 1rem;
+    top: 8rem;
+    z-index: 1;
+    background: $light-shade;
+    border-radius: 25px;
+    width: 25%;
+    padding: 1rem;
+  }
+
+  #navProfile{
+    display: block;
+    width: 2rem;
+    height: 2rem;
+
+    & img{
+      width: 2rem;
+      height: 2rem;
+      border: 1px solid rgba($color: #000000, $alpha: 0.2);
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+
+  #form-container{
+    width: 60%;
+    max-width: 100%;
+  }
+  
+  form #navSearch{
+    width: 50%;
+    transition: width 250ms ease-out;
+    will-change: width;
+  
+    &:focus{
+      width: 80%;
     }
   }
 

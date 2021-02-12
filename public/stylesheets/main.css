@@ -38,7 +38,7 @@ a:hover {
   opacity: 0.95;
 }
 
-.btn-dark-shade:hover {
+.btn-dark-shade#emailBtn:hover {
   color: #f4f0f0;
   opacity: 1;
   scale: 1.1;
@@ -51,6 +51,7 @@ a:hover {
           box-shadow: 0.15px 2.2px 0.225px #f4f0f0;
   border: none;
   outline: none;
+  color: #f4f0f0;
   background: #3a283d;
 }
 
@@ -93,6 +94,36 @@ btn-light-shaded {
 
 .btn-outline-danger {
   outline: #f44336;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#form-container {
+  width: 60%;
+  max-width: 100%;
+}
+
+form #navSearch {
+  width: 65%;
+  -webkit-transition: width 250ms ease-out;
+  transition: width 250ms ease-out;
+  will-change: width;
+}
+
+form #navSearch:focus {
+  width: 100%;
 }
 
 .navbar-brand {
@@ -278,6 +309,68 @@ li.facilities-icon {
   }
   #action-top form {
     width: auto;
+  }
+  .navbar {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navbar-toggler {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navbar-toggler:hover, .navbar-toggler:focus {
+    -webkit-box-shadow: 0 1px 0 0 rgba(75, 70, 77, 0.3);
+            box-shadow: 0 1px 0 0 rgba(75, 70, 77, 0.3);
+    outline: none;
+  }
+  .navbar-toggler-icon {
+    margin-right: 5px;
+  }
+  .navbar-collapse {
+    position: absolute;
+    right: 1rem;
+    top: 8rem;
+    z-index: 1;
+    background: #f4f0f0;
+    border-radius: 25px;
+    width: 25%;
+    padding: 1rem;
+  }
+  #navProfile {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+  }
+  #navProfile img {
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  #form-container {
+    width: 60%;
+    max-width: 100%;
+  }
+  form #navSearch {
+    width: 50%;
+    -webkit-transition: width 250ms ease-out;
+    transition: width 250ms ease-out;
+    will-change: width;
+  }
+  form #navSearch:focus {
+    width: 80%;
   }
   .facilities-icon > p > i {
     width: 2rem;

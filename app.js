@@ -18,7 +18,7 @@ const houseRoute = require("./routes/houses"),
 
 //connect to db
 mongoose
-  .connect("mongodb://localhost/rentahouse", {
+  .connect(process.env.DATABASEURL, {
     useFindAndModify: false,
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -27,9 +27,7 @@ mongoose
   .then(() => {
     console.log("Conneted");
   })
-  .catch((err) => {
-    console.log("Erorr", err.message);
-  });
+  .catch((err) => console.log("Erorr", err.message));
 
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
