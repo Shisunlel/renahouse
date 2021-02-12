@@ -17,7 +17,7 @@ function seeDB() {
     if (err) console.log("Error comment deletion", err);
   });
   //create user
-  let user = new User({ username: "joe", password: "123" });
+  let user = new User({ username: "joe" });
   User.create(user, (err, users) => {
     users.save();
   });
