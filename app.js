@@ -17,16 +17,16 @@ const houseRoute = require("./routes/houses"),
   commentRoute = require("./routes/comment");
 
 //connect to db
-// const local = "mongodb://localhost/rentahouse";
+const local = "mongodb://localhost/rentahouse";
 mongoose
-  .connect(process.env.DATABASEURL, {
+  .connect(local, {
     useFindAndModify: false,
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
   })
   .then(() => {
-    console.log("Conneted");
+    console.log("Connected");
   })
   .catch((err) => console.log("Erorr", err.message));
 
@@ -65,7 +65,7 @@ app.use("/", authRoute);
 app.use("/house/:id", commentRoute);
 
 app.get('*', (req, res)=>{
-  res.send("ERROR 404: PAGE NOT FOUND");
+  res.render("404");
 });
 
 

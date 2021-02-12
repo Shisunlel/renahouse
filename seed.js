@@ -18,9 +18,7 @@ function seeDB() {
   });
   //create user
   let user = new User({ username: "joe" });
-  User.create(user, (err, users) => {
-    users.save();
-  });
+  User.create(user);
   //seed data
   let houseData = [
     {
