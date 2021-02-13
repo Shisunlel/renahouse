@@ -18,9 +18,7 @@ function seeDB() {
   });
   //create user
   let user = new User({ username: "joe", password: "123" });
-  User.create(user, (err, users) => {
-    users.save();
-  });
+  User.create(user, (err, users) => {});
   //seed data
   let houseData = [
     {
@@ -157,11 +155,12 @@ function seeDB() {
     },
   ];
 
-  let dateString = new Date().toLocaleDateString();
+  let dateString = new Date();
 
   let commentData = [
     {
-      text: "This place is great, but I wish there was Internet",
+      text:
+        "Apartment as describe. The photo is accurate. Comfortable bed. Very good location and also very safe! Communication with the host is 10/10.",
       author: {
         id: user._id,
         username: user.username,
@@ -173,14 +172,14 @@ function seeDB() {
   houseData.forEach((seed) => {
     House.create(seed, (err, newHouse) => {
       console.log("House created");
-      commentData.forEach((comments) => {
-        Comment.create(comments, (err, newComment) => {
-            User.find({}, (err, user)=>{
-                newHouse.host["id"] = user[0].id;
-                newHouse.host["username"] = user[0].username;
-                newHouse.comments.push(newComment);
-                newHouse.save();
-            });
+      commentData.forEach((commentSeed) => {
+        Comment.create(commentSeed, (err, newComment) => {
+          User.find({}, (err, user) => {
+            newHouse.host["id"] = user[0]._id;
+            newHouse.host["username"] = user[0].username;
+            newHouse.comments.push(newComment);
+            newHouse.save();
+          });
         });
       });
     });
