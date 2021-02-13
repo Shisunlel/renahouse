@@ -133,6 +133,20 @@ form #navSearch{
   height: 100px;
 }
 
+
+.image-container{
+  width: 100%;
+  height: 200px;
+
+  & a img{
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+}
+
+
 #action-top {
   width: 100%;
 
@@ -387,8 +401,12 @@ li.facilities-icon {
 }
 
 @media only screen and (min-width: 1100px) {
-  .card > a img {
-    height: 200px;
+  .image-container{
+    height: 100%;
+  }
+
+  .image-container > a img {
+    height: 175px;
   }
 
   .carousel-inner {

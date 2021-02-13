@@ -131,6 +131,19 @@ form #navSearch:focus {
   height: 100px;
 }
 
+.image-container {
+  width: 100%;
+  height: 200px;
+}
+
+.image-container a img {
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 #action-top {
   width: 100%;
 }
@@ -386,8 +399,11 @@ li.facilities-icon {
 }
 
 @media only screen and (min-width: 1100px) {
-  .card > a img {
-    height: 200px;
+  .image-container {
+    height: 100%;
+  }
+  .image-container > a img {
+    height: 175px;
   }
   .carousel-inner {
     height: 330px;

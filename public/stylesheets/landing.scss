@@ -306,13 +306,21 @@ form {
 }
 
 .card {
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
+  & .card-animation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 0 0%;
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
 
+    &:hover {
+      -webkit-transform: translate(1.05%, -5%);
+      transform: translate(1.05%, -5%);
+    }
+  }
   &:hover {
     border: 2px solid #6c63ff;
-    -webkit-transform: translate(1.05%, -5%);
-    transform: translate(1.05%, -5%);
   }
 }
 
@@ -475,7 +483,7 @@ footer {
     -ms-flex: 1 0 0% !important;
     flex: 1 0 0% !important;
 
-    &:hover {
+    & .card-animation:hover {
       padding: 30px 35px;
       -webkit-transform: translate(1.05%, -5%);
       -ms-transform: translate(1.05%, -5%);
